@@ -1,10 +1,15 @@
 from base64 import urlsafe_b64decode
+
+import structlog
+from ciso_assistant.settings import EMAIL_HOST, EMAIL_HOST_RESCUE
 from django.contrib.auth import get_user_model, login, logout
 from django.contrib.auth.tokens import PasswordResetTokenGenerator
 from django.utils.decorators import method_decorator
 from django.utils.translation import gettext_lazy as _
 from django.views.decorators.csrf import ensure_csrf_cookie
+from knox.views import LoginView as KnoxLoginView
 from rest_framework import permissions, serializers, status, views
+from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.response import Response
 from rest_framework.status import (
     HTTP_200_OK,
@@ -12,20 +17,14 @@ from rest_framework.status import (
     HTTP_401_UNAUTHORIZED,
     HTTP_500_INTERNAL_SERVER_ERROR,
 )
-from ciso_assistant.settings import EMAIL_HOST, EMAIL_HOST_RESCUE
-from rest_framework.authtoken.serializers import AuthTokenSerializer
-from knox.views import LoginView as KnoxLoginView
 
+from .models import Role, RoleAssignment
 from .serializers import (
     ChangePasswordSerializer,
     LoginSerializer,
-    SetPasswordSerializer,
     ResetPasswordConfirmSerializer,
+    SetPasswordSerializer,
 )
-
-from .models import Role, RoleAssignment
-
-import structlog
 
 logger = structlog.get_logger(__name__)
 

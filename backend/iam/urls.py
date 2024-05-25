@@ -1,15 +1,14 @@
+import knox.views as knox_views
 from django.urls import path
 
-
 from .views import (
-    LoginView,
     ChangePasswordView,
     CurrentUserView,
+    LoginView,
     PasswordResetView,
     ResetPasswordConfirmView,
     SetPasswordView,
 )
-import knox.views as knox_views
 
 urlpatterns = [
     path(r"login/", LoginView.as_view(), name="knox_login"),

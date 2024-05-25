@@ -178,6 +178,7 @@ REST_FRAMEWORK = {
     ],
     "DEFAULT_AUTHENTICATION_CLASSES": [
         "knox.auth.TokenAuthentication",
+        "iam.auth.KeycloakAuthentication",
     ],
     "DEFAULT_PERMISSION_CLASSES": [
         "rest_framework.permissions.IsAuthenticated",
@@ -189,6 +190,7 @@ REST_FRAMEWORK = {
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
 
+
 REST_KNOX = {
     "SECURE_HASH_ALGORITHM": "cryptography.hazmat.primitives.hashes.SHA512",
     "AUTH_TOKEN_CHARACTER_LENGTH": 64,
@@ -197,6 +199,7 @@ REST_KNOX = {
     "AUTO_REFRESH": AUTH_TOKEN_AUTO_REFRESH,
     "MIN_REFRESH_INTERVAL": 60,
 }
+
 
 if DEBUG:
     REST_FRAMEWORK["DEFAULT_RENDERER_CLASSES"].append(
