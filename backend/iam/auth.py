@@ -13,7 +13,7 @@ class KeycloakAuthentication(BaseAuthentication):
             server_url=os.environ.get("KEYCLOAK_SERVER_URL"),
             client_id=os.environ.get("KEYCLOAK_CLIENT_ID"),
             client_secret_key=os.environ.get("KEYCLOAK_CLIENT_SECRET"),
-            realm_name="hr-dev",
+            realm_name=os.environ.get("KEYCLOAK_REALM"),
         )
 
         try:
