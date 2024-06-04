@@ -1339,9 +1339,13 @@ class ComplianceAssessmentViewSet(BaseModelViewSet):
     @action(detail=True, methods=["get"])
     def global_score(self, request, pk):
         """Returns the global score of the compliance assessment"""
+        skip_compute = "skipcompute" in request.query_params
+        # skip compute is used to avoid computing the score if it is not needed
         return Response(
             {
-                "score": self.get_object().get_global_score(),
+                "score": self.get_object().get_global_score()
+                if not skip_compute
+                else None,
                 "max_score": self.get_object().max_score,
                 "min_score": self.get_object().min_score,
                 "scores_definition": self.get_object().scores_definition,
