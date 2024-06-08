@@ -161,5 +161,16 @@
 	"statistics": "Statystyka",
 	"myProjects": "Moje projekty",
 	"scenarios": "Scenariusze",
-	"assignedProjects": "Przypisany do {number} projekt"
+	"assignedProjects": "Przypisany do {number} projektów",
+	"currentRiskLevelPerScenario": "Bieżący poziom ryzyka według scenariusza ryzyka",
+	"residualRiskLevelPerScenario": "Poziom ryzyka rezydualnego według scenariusza ryzyka",
+	"appliedControlsStatus": "Stan zastosowanych kontrolek",
+	"currentRisk": "Aktualne ryzyko",
+	"residualRisk": "Ryzyko resztkowe",
+	"planned": "Zaplanowany",
+	"active": "Aktywny",
+	"inactive": "Nieaktywny",
+	"watchlist": "Lista obserwacyjna",
+	"watchlistDescription": "Przedmioty, które wygasły lub wygasną w ciągu najbliższych 30 dni",
+	"measuresToReview": "Zastosowane kontrole do przeglądu"
 }
