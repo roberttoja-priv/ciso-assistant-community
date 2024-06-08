@@ -150,5 +150,16 @@
 	"residualProba": "Prawdopodobieństwo resztkowe",
 	"residualImpact": "Resztkowy wpływ",
 	"existingControls": "Istniejące kontrolki",
-	"strengthOfKnowledge": "Świadomość"
+	"strengthOfKnowledge": "Świadomość",
+	"dueDate": "Termin",
+	"attachment": "Załącznik",
+	"observation": "Obserwacja",
+	"importMatrices": "Importuj macierze",
+	"importFrameworks": "Importuj standardy",
+	"summary": "Podsumowanie",
+	"composer": "Kompozytor",
+	"statistics": "Statystyka",
+	"myProjects": "Moje projekty",
+	"scenarios": "Scenariusze",
+	"assignedProjects": "Przypisany do {number} projekt"
 }
