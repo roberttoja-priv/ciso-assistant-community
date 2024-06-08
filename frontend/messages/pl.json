@@ -101,5 +101,12 @@
 	"project": "Projekt",
 	"folder": "Folder",
 	"riskAssessment": "Analiza ryzyka",
-	"threat": "Zagrożenie"
+	"threat": "Zagrożenie",
+	"framework": "Standard",
+	"file": "Plik",
+	"language": "Język",
+	"builtin": "Wbudowany",
+	"next": "Następny",
+	"previous": "Poprzedni",
+	"show": "Pokaż"
 }
